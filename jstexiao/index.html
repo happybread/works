@@ -2,34 +2,127 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>用js做的特效</title>
-	<style>
-		a{
-			text-decoration: none;
-			display: block;
-			height: 30px;
-			width: 200px;
-			line-height: 30px;
-			color: #000;
-		}
-		a:hover{
-			color: red;
-		}
-
-	</style>
+	<title>百日百页面</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
-	<div class="wrapper">
-		<a href="rollpicture.html">点击按钮滑动改变图片</a>
-		<a href="图片自动滑动特效.html">图片自动滑动特效</a>	
-		<a href="bigpic.html">图片放大特效</a>
-		<a href="drop-down-list.html">下拉列表</a>
-		<a href="roll-list.html">滚动导航</a>
-		<a href="百叶窗.html">百叶窗</a>
-		<a href="瀑布流布局和无限加载功能1.html">瀑布流布局和无限加载功能</a>
-		<a href="自顶特效.html">自顶特效</a>
-		<a href="左侧居中链接图片切换.html">左侧居中链接图片切换</a>
-	
-	</div>
+	<aside>
+		<a class="hamburger">
+			<i class="fa fa-bars"></i>
+		</a>
+		<div class="side-nav">
+  			<ul>
+	         	<li><a href="../index.html">首页</a></li>
+	         	<li><a href="#">百日百页面</a></li>
+	         	<li><a href="http://happybread.github.io/works/">my website</a></li>
+        	</ul>
+    	</div>
+    	<div class="ui-mask"></div>
+	</aside> 
+	<header>
+		<div class="hero clearfix">
+			<h1>百日百页面</h1>
+			<p>代码如画笔 百日百页面</p>
+		</div>
+	</header>
+	<section class="banner">
+		<ul class="toc clearfix">
+	      	<li>
+	         	<a class="clearfix" href="bigpic.html">
+		            <div class="id">1</div>
+		            <div class="detail">
+			            <div class="title">随鼠标显示大图</div>
+			            <div class="date">2015年10月01日</div>
+		            </div>
+	         	</a>
+	     	</li>
+	     	<li>
+	         	<a class="clearfix" href="drop-down-list.html">
+		            <div class="id">2</div>
+		            <div class="detail">
+			            <div class="title">下拉菜单</div>
+			            <div class="date">2015年10月02日</div>
+		            </div>
+	         	</a>
+	     	</li>
+	     	<li>
+	         	<a class="clearfix" href="roll-list.html">
+		            <div class="id">3</div>
+		            <div class="detail">
+			            <div class="title">滚动菜单</div>
+			            <div class="date">2015年10月03日</div>
+		            </div>
+	         	</a>
+	     	</li>
+	     	<li>
+	         	<a class="clearfix" href="rollpicture.html">
+		            <div class="id">4</div>
+		            <div class="detail">
+			            <div class="title">图片切换</div>
+			            <div class="date">2015年10月04日</div>
+		            </div>
+	         	</a>
+	     	</li>
+	     	<li>
+	         	<a class="clearfix" href="图片自动滑动特效.html">
+		            <div class="id">5</div>
+		            <div class="detail">
+			            <div class="title">图片自动滑动</div>
+			            <div class="date">2015年10月05日</div>
+		            </div>
+	         	</a>
+	     	</li>
+	     	<li>
+	         	<a class="clearfix" href="百叶窗.html">
+		            <div class="id">6</div>
+		            <div class="detail">
+			            <div class="title">百叶窗</div>
+			            <div class="date">2015年10月06日</div>
+		            </div>
+	         	</a>
+	     	</li>
+	     	<li>
+	         	<a class="clearfix" href="瀑布流布局和无限加载功能1.html">
+		            <div class="id">7</div>
+		            <div class="detail">
+			            <div class="title">瀑布流布局和无限加载功能</div>
+			            <div class="date">2015年10月07日</div>
+		            </div>
+	         	</a>
+	     	</li>
+	     	<li>
+	         	<a class="clearfix" href="左侧居中链接图片切换.html">
+		            <div class="id">10</div>
+		            <div class="detail">
+			            <div class="title">左侧居中链接图片切换</div>
+			            <div class="date">2015年10月08日</div>
+		            </div>
+	         	</a>
+	     	</li>
+	    </ul>
+	</section>
+	<!-- 雪花容器 -->
+	<div class="snow-container"></div>   
+	<footer>
+		<h1>In the future you will thank now hard yourself</h1>
+	</footer>
+	<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
+    <script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
+	<script type="text/javascript" src="js/three.js"></script>
+	<script type="text/javascript">
+		     $('.fa-bars').click(function(){
+	         $('.side-nav').addClass('show');
+	         $('.ui-mask').addClass('show');
+	      })
+	      $('.ui-mask').click(function(){
+	         $('.side-nav').removeClass('show');
+	         $(this).removeClass('show');
+	      })
+		function randomRange(t,i){return Math.random()*(i-t)+t}Particle3D=function(t){THREE.Particle.call(this,t),this.velocity=new THREE.Vector3(0,-2,0),this.velocity.rotateX(randomRange(-45,45)),this.velocity.rotateY(randomRange(0,360)),this.gravity=new THREE.Vector3(0,0,0),this.drag=1},Particle3D.prototype=new THREE.Particle,Particle3D.prototype.constructor=Particle3D,Particle3D.prototype.updatePhysics=function(){this.velocity.multiplyScalar(this.drag),this.velocity.addSelf(this.gravity),this.position.addSelf(this.velocity)};var TO_RADIANS=Math.PI/180;THREE.Vector3.prototype.rotateY=function(t){cosRY=Math.cos(t*TO_RADIANS),sinRY=Math.sin(t*TO_RADIANS);var i=this.z,o=this.x;this.x=o*cosRY+i*sinRY,this.z=o*-sinRY+i*cosRY},THREE.Vector3.prototype.rotateX=function(t){cosRY=Math.cos(t*TO_RADIANS),sinRY=Math.sin(t*TO_RADIANS);var i=this.z,o=this.y;this.y=o*cosRY+i*sinRY,this.z=o*-sinRY+i*cosRY},THREE.Vector3.prototype.rotateZ=function(t){cosRY=Math.cos(t*TO_RADIANS),sinRY=Math.sin(t*TO_RADIANS);var i=this.x,o=this.y;this.y=o*cosRY+i*sinRY,this.x=o*-sinRY+i*cosRY};
+		$(function(){var container=document.querySelector(".snow-container");if(/MSIE 6|MSIE 7|MSIE 8/.test(navigator.userAgent)){return}else{if(/MSIE 9|MSIE 10/.test(navigator.userAgent)){$(container).css("height",$(window).height()).bind("click",function(){$(this).fadeOut(1000, function(){$(this).remove()})})}}var containerWidth=$(container).width();var containerHeight=$(container).height();var particle;var camera;var scene;var renderer;var mouseX=0;var mouseY=0;var windowHalfX=window.innerWidth/2;var windowHalfY=window.innerHeight/2;var particles=[];var particleImage=new Image();particleImage.src="images/snow.png";var snowNum=500;function init(){camera=new THREE.PerspectiveCamera(75,containerWidth/containerHeight,1,10000);camera.position.z=1000;scene=new THREE.Scene();scene.add(camera);renderer=new THREE.CanvasRenderer();renderer.setSize(containerWidth,containerHeight);var material=new THREE.ParticleBasicMaterial({map:new THREE.Texture(particleImage)});for(var i=0;i<snowNum;i++){particle=new Particle3D(material);particle.position.x=Math.random()*2000-1000;particle.position.y=Math.random()*2000-1000;particle.position.z=Math.random()*2000-1000;particle.scale.x=particle.scale.y=1;scene.add(particle);particles.push(particle)}container.appendChild(renderer.domElement);document.addEventListener("mousemove",onDocumentMouseMove,false);document.addEventListener("touchstart",onDocumentTouchStart,false);document.addEventListener("touchmove",onDocumentTouchMove,false);setInterval(loop,1000/40)}function onDocumentMouseMove(event){mouseX=event.clientX-windowHalfX;mouseY=event.clientY-windowHalfY}function onDocumentTouchStart(event){if(event.touches.length==1){event.preventDefault();mouseX=event.touches[0].pageX-windowHalfX;mouseY=event.touches[0].pageY-windowHalfY}}function onDocumentTouchMove(event){if(event.touches.length==1){event.preventDefault();mouseX=event.touches[0].pageX-windowHalfX;mouseY=event.touches[0].pageY-windowHalfY}}function loop(){for(var i=0;i<particles.length;i++){var particle=particles[i];particle.updatePhysics();with(particle.position){if(y<-1000){y+=2000}if(x>1000){x-=2000}else{if(x<-1000){x+=2000}}if(z>1000){z-=2000}else{if(z<-1000){z+=2000}}}}camera.position.x+=(mouseX-camera.position.x)*0.005;camera.position.y+=(-mouseY-camera.position.y)*0.005;camera.lookAt(scene.position);renderer.render(scene,camera)}init()});
+	</script>
 </body>
 </html>

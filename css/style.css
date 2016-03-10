@@ -52,8 +52,8 @@ body{
 }
 .header-section img {
   margin-top: 7em;
-  width: 200px;
-  height: 200px;
+  max-width: 200px;
+  width:100%;
   border-radius: 50%;
 }
 .header-section h1 {
