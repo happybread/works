@@ -16,7 +16,7 @@ nav{
 nav ul{display: table-row;}
 nav ul li{
 	display: table-cell;
-	background-image: -moz-linear-gradient(top,#fafafa,#eeeeee,#e4e4e4);
+	/*background-image: -moz-linear-gradient(top,#fafafa,#eeeeee,#e4e4e4);*/
 	background:-webkit-linear-gradient(top,#fafafa,#eeeeee,#e4e4e4);}
 nav ul li a{
 	font-family: franklingothicbtFont;
